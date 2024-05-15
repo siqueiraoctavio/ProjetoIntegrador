@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        /* Estilos CSS podem ser adicionados aqui para personalização */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2e3094;
+            color: #fff;
+            padding: 10 px 0;
+            text-align: center;
+        }
+        .btn-group {
+            margin-top: 10px;
+        }
+        .btn {
+            background-color:#02adee ;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #777;
+        }
+    </style>
+    <header>
+        <img src="images/logo.jpg" alt="Logo" class="logo" width="100" height="auto">
+         <div class="btn-group">
+            <a href="/consultar" class="btn">consultar</a>
+            <a href="/cadastrar" class="btn">cadastrar</a>
+            <a href="/" class="btn">home</a>
+        </div>
+    </header>
+</head>
+
+    <title> Consulta de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-container input[type=submit],input[type=reset] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-container input[type=submit]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Consultar Cliente</h2>
+        <div class="search-container">
+            <form action="/consultar_cliente" method="GET">
+                <input type="text" placeholder="Digite o CNPJ ou CPF" name="empresa">
+                <input type="submit" value="Buscar">
+                <input type="reset"  Value="Limpar">
+
+            </form>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>CNPJ/CPF</th>
+                    <th>Cliente</th>
+                    <th>Endereço</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados dinâmicos dos clientes serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>Obras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Valor</th>
+                    <th>Endereço </th>
+                    <th>Contato</th>
+                    <th> Observações</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <!-- Dados dinâmicos dos clientes serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Matérias Primas</th>
+                    <th>Consumíveis</th>
+                    <th> Miscelânea</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <!-- Dados dinâmicos dos clientes serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
